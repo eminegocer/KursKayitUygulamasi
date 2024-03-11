@@ -1,0 +1,16 @@
+@model KursKayit
+<h2>Kurs Kaydı Güncelleme</h2>
+<hr>
+
+<form  asp-action="Edit" method="post">
+    <input asp-for="KayitId" type="hidden">
+    <div class="mb-3">
+        <label asp-for="OgrenciId" class="form-label">Öğrenci</label>
+        <select asp-for="OgrenciId" asp-items="ViewBag.Ogrenciler" class="form-select"></select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="KursId" class="form-label">Kurs</label>
+        <select asp-for="KursId" asp-items="ViewBag.Kurslar" class="form-select">Kurs</select>
+    </div>
+    <button type="submit" class="btn btn-secondary">Güncelle</button>
+</form>

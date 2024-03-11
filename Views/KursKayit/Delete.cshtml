@@ -1,0 +1,14 @@
+@model KursKayit
+<h2>Kurs Kaydı Silme</h2>
+<hr>
+
+
+<p>
+    <b>@Model.Ogrenci.OgrenciAdSoyad</b> İsimli Öğrenciye Ait <b> @Model.Kurs.Baslik</b> İsimli Kurs Kaydını Silmek İstediğinize Emin Misiniz?
+
+    <form action="Delete" method="post">
+        <input type="hidden" asp-for="KayitId">
+        <button type="submit" class="btn btn-danger">Evet</button>
+        <a asp-action="Index" class="btn btn-primary">Hayır</a>
+    </form>
+</p>
